@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_design.*
 
 class DesignActivity : AppCompatActivity() {
 
@@ -14,6 +16,10 @@ class DesignActivity : AppCompatActivity() {
         setTheme(appTheme.styleId)
 
         setContentView(R.layout.activity_design)
+
+        fab.setOnClickListener {
+            Snackbar.make(coordinatorLayout, "Snackbar", Snackbar.LENGTH_SHORT).show()
+        }
     }
 
     companion object {
