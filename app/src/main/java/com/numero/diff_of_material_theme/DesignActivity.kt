@@ -17,6 +17,10 @@ class DesignActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_design)
 
+        supportActionBar?.apply {
+            setTitle(appTheme.titleId)
+        }
+
         fab.setOnClickListener {
             Snackbar.make(coordinatorLayout, "Snackbar", Snackbar.LENGTH_SHORT).show()
         }
