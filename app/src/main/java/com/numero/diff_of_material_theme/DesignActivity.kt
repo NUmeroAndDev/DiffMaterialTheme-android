@@ -3,6 +3,7 @@ package com.numero.diff_of_material_theme
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_design.*
@@ -23,6 +24,17 @@ class DesignActivity : AppCompatActivity() {
 
         fab.setOnClickListener {
             Snackbar.make(coordinatorLayout, "Snackbar", Snackbar.LENGTH_SHORT).show()
+        }
+
+        showDialogButton.setOnClickListener {
+            val dialog = with(AlertDialog.Builder(this@DesignActivity)) {
+                setTitle("Title")
+                setMessage("Message")
+                setPositiveButton("Positive", null)
+                setNegativeButton("Negative", null)
+                create()
+            }
+            dialog.show()
         }
     }
 
